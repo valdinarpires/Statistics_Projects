@@ -98,5 +98,55 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Projects</span>"
     ]
+  },
+  {
+    "objectID": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html",
+    "href": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html",
+    "title": "Language R",
+    "section": "",
+    "text": "Introdução\nThe Hungarian physician Dr. Ignaz Semmelweis was born in 1818 and worked at the Vienna General Hospital. His work on puerperal fever was of great importance. Puerperal fever is a potentially fatal disease that affects women after childbirth. In the early 1840s, around 10% of women who had given birth at the Vienna General Hospital died from this disease. Dr. Semmelweis discovered the cause of puerperal fever: contaminated hands of doctors who attended women during childbirth. However, his discovery was not accepted for many years.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Language R</span>"
+    ]
+  },
+  {
+    "objectID": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#observing-the-situation",
+    "href": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#observing-the-situation",
+    "title": "Language R",
+    "section": "Observing the situation",
+    "text": "Observing the situation\nLet’s reanalyze the data that led Dr. Semmelweis to discover the importance of handwashing.\n\n# Loading the tidyverse package\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.3\n\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n\nWarning: package 'tibble' was built under R version 4.4.3\n\n\nWarning: package 'tidyr' was built under R version 4.4.3\n\n\nWarning: package 'readr' was built under R version 4.4.3\n\n\nWarning: package 'purrr' was built under R version 4.4.3\n\n\nWarning: package 'dplyr' was built under R version 4.4.3\n\n\nWarning: package 'stringr' was built under R version 4.4.3\n\n\nWarning: package 'forcats' was built under R version 4.4.3\n\n\nWarning: package 'lubridate' was built under R version 4.4.3\n\n# Reading the dataset about annual deaths and saving it in the data_death object\ndata_death &lt;- read_csv(\"mortes_anuais_clinica.csv\")\n\n# Renaming the columns\ndata_death &lt;- data_death %&gt;%\n  rename(\n    year = ano,\n    births = nascimentos,\n    death = mortes,\n    clinical = clinica\n  )\n\n#Renaming some values \ndata_death &lt;- data_death %&gt;%\n  mutate(\n    clinical = recode(\n      clinical,\n      \"clinica 1\" = \"clinic 1\",\n      \"clinica 2\" = \"Clinic 2\"\n    )\n  )\n# Printing the dataset\ndata_death\n\n# A tibble: 12 × 4\n    year births death clinical\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   \n 1  1841   3036   237 clinic 1\n 2  1842   3287   518 clinic 1\n 3  1843   3060   274 clinic 1\n 4  1844   3157   260 clinic 1\n 5  1845   3492   241 clinic 1\n 6  1846   4010   459 clinic 1\n 7  1841   2442    86 Clinic 2\n 8  1842   2659   202 Clinic 2\n 9  1843   2739   164 Clinic 2\n10  1844   2956    68 Clinic 2\n11  1845   3241    66 Clinic 2\n12  1846   3754   105 Clinic 2\n\n\nThe dataset data_death shows the number of childbirths in two clinics at the Vienna General Hospital between 1841 and 1846. We can observe a high number of women who died during childbirth, many of them due to puerperal fever.\nTo better understand the situation, we will add a new column to the dataset with the proportion of deaths per year in each clinic.\n\ndata_death &lt;- data_death %&gt;% \n  mutate(proportion=death*100/births)\n\nCompare a situação entre as duas clínicas usando estatísticas sumárias e/ou gráficos que achar relevantes. Explique exatamente o que você está comparando (qual a variável utilizada?).\n\nggplot(data_death, aes(y=death, x=clinical)) +\n  geom_boxplot(colour = \"darkblue\") + \n  labs(\n    title = \"Distribution of Death in two Clinics\",\n    x = \"Clinic\",\n    y = \"Number of Deaths\" )\n\n\n\n\n\n\n\n\nAs observed in the graph, there is a difference between the medians of Clinic 1 and Clinic 2. Clinic 1 exhibits a higher median than Clinic 2, which suggests that Clinic 1 records a greater number of deaths. Furthermore, the minimum number of deaths in Clinic 1 exceeds the maximum value observed in Clinic 2, providing additional evidence that Clinic 1 has a higher mortality rate than Clinic 2.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Language R</span>"
+    ]
+  },
+  {
+    "objectID": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#buscando-por-uma-explicação-e-propondo-uma-intervenção",
+    "href": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#buscando-por-uma-explicação-e-propondo-uma-intervenção",
+    "title": "Language R",
+    "section": "Buscando por uma explicação e propondo uma intervenção",
+    "text": "Buscando por uma explicação e propondo uma intervenção\nDr. Semmelweis observed a pattern in these data and became concerned. The only difference between the two clinics was that, in Clinic 1, medical students attended the deliveries, whereas in Clinic 2 midwives attended the women. While the midwives worked exclusively with childbirth, the students also performed autopsies.\nSemmelweis began to suspect that something in the autopsy room was influencing the mortality rate. His primary hypothesis was that some form of contaminating agent was being transmitted on the hands of the students, causing puerperal fever. In an attempt to reduce the high mortality rate, he instructed all staff to wash their hands. At the time, however, this measure was highly controversial, since the scientific knowledge of the period did not yet include an understanding of bacteria.\n\n# Reading the monthly deaths data for Clinic 1\nmonth &lt;- read_csv(\"mortes_mensais.csv\")\n\n# Renaming the columns\nmonth &lt;- month %&gt;%\n  rename(\n    date = data,\n    births = nascimentos,\n    death = mortes\n  )\n\n# Adding the percentage of deaths relative to births\nmonth &lt;- month %&gt;% mutate(proportion = death * 100 / births)\n\n# Printing the first observations of the data set\nhead(month)\n\n# A tibble: 6 × 4\n  date       births death proportion\n  &lt;date&gt;      &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;\n1 1841-01-01    254    37     14.6  \n2 1841-02-01    239    18      7.53 \n3 1841-03-01    277    12      4.33 \n4 1841-04-01    255     4      1.57 \n5 1841-05-01    255     2      0.784\n6 1841-06-01    200    10      5",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Language R</span>"
+    ]
+  },
+  {
+    "objectID": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#the-effect-of-handwashing",
+    "href": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#the-effect-of-handwashing",
+    "title": "Language R",
+    "section": "The Effect of Handwashing",
+    "text": "The Effect of Handwashing\nThe proportion of deaths over time is analysed through the following plot:\n\nggplot(month, aes(x = date, y = proportion)) +\n  geom_point() +\n  labs(\n    title = \"Monthly Proportion of Deaths in Clinic 1\",\n    x = \"Date\",\n    y = \"Proportion of Deaths (%)\"\n  )\n\n\n\n\n\n\n\n\nThe plot provides an indication of when the order to wash hands was implemented. The change occurred in the summer of 1847.\n\n# Date of the start of the order Handwashing\nstart_handwashing = as.Date('1847-06-01')\n\n\n# Creating a binary column indicating whether the date falls on or after\n# the handwashing order (FALSE = before the order, TRUE = on or after)\n\nmonth &lt;- month %&gt;%\n  mutate(order_handwash = date &gt;= start_handwashing)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Language R</span>"
+    ]
+  },
+  {
+    "objectID": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#testing-hyphotesis",
+    "href": "Semmelweis_Handwashing_Study/Semmelweis_Handwashing_Study.html#testing-hyphotesis",
+    "title": "Language R",
+    "section": "Testing Hyphotesis",
+    "text": "Testing Hyphotesis\nDespite the marked decrease in the proportion of deaths observed after the students began washing their hands, Dr. Semmelweis was met with disbelief. At the time, he did not have the statistical tools needed to defend his position. In this study, we use a hypothesis test to draw conclusions from the data.\nThe mean proportion of deaths differs between the two periods (before and after the handwashing order). Can this difference be attributed to handwashing, or could it plausibly arise by chance alone, even if handwashing had no practical effect? To address this question, we adopt as the null hypothesis (H0) that handwashing has no effect on the proportion of deaths, and we assess how likely a difference as large as the one observed would be under that assumption. If this probability is very small, we have evidence against H0 and in favor of an effect of handwashing.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Language R</span>"
+    ]
   }
 ]
