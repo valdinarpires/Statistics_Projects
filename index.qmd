@@ -1,5 +1,29 @@
-# Preface {.unnumbered}
+# Statistics Portfolio
 
-This is a Quarto book.
+## About
+Valdinar Pires
+Student at the University of Campinas (UNICAMP), with an interest in statistical analysis, data visualization, and statistical modeling.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+This portfolio brings together projects developed throughout my academic training, with an emphasis on applying statistical concepts to real-world and historical datasets.
+
+## Projects
+
+The projects presented here explore different statistical methods and approaches, combining theoretical foundations with practical analysis in R and other data-related tools.
+
+### Current projects
+
+* **Semmelweis Handwashing Study**
+  Analysis of historical data from the Vienna General Hospital, investigating the relationship between handwashing and maternal mortality.
+
+More projects will be added as my academic portfolio develops.
+
+
+## Tools
+
+The main tools used across the projects include:
+
+* R
+* Quarto
+* Git and GitHub
+
+Additional tools and programming languages will be incorporated as the portfolio expands.

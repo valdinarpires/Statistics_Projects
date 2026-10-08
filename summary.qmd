@@ -1,3 +1,29 @@
-# Summary
+# Projects
 
-In summary, this book has no content whatsoever.
+This section presents selected statistical projects developed throughout my academic training.
+
+Each project focuses on a specific dataset, statistical question, or methodological problem, combining statistical reasoning with reproducible data analysis.
+
+## Semmelweis Handwashing Study
+
+**Statistical analysis of handwashing and maternal mortality**
+
+This project analyzes historical data from the Vienna General Hospital between 1841 and 1846 to investigate the relationship between handwashing practices and maternal mortality.
+
+The analysis includes:
+
+* Comparison of mortality between two clinics;
+* Descriptive statistics and data visualization;
+* Comparison of mortality before and after the introduction of handwashing;
+* Comparison of mean, median, and mode;
+* Hypothesis testing.
+
+**Tools:** R · tidyverse · ggplot2 · Quarto
+
+[View project →](Semmelweis_Handwashing_Study/)
+
+---
+
+## More Projects
+
+Additional projects will be added as my academic portfolio develops, covering topics such as sampling, regression, experimental design, probability, statistical inference, and data analysis.

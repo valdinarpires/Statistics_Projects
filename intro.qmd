@@ -1,5 +1,22 @@
-# Introduction
+# About Me
 
-This is a book created from markdown and executable code.
+I am a Statistics student at the University of Campinas (UNICAMP), interested in understanding how statistical methods can be used to extract information from data and support quantitative reasoning.
 
-See @knuth84 for additional discussion of literate programming.
+My academic training combines statistical theory, mathematical foundations, and practical data analysis. Through coursework and independent projects, I have been developing skills in statistical programming, data visualization, modeling, and statistical inference.
+
+## Academic Interests
+
+My main interests include:
+
+* Statistical inference
+* Sampling and survey methodology
+* Regression and statistical modeling
+* Experimental design
+* Exploratory and descriptive data analysis
+* Data visualization
+
+## Working with Data
+
+I am particularly interested in the process of moving from raw data to meaningful statistical conclusions: understanding the structure of a dataset, selecting appropriate methods, evaluating assumptions, and communicating results clearly.
+
+This portfolio serves as a record of that development, bringing together projects completed during my academic training and documenting the methods used in each analysis.
