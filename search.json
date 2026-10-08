@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistics Portfolio",
+    "section": "",
+    "text": "Statistics Portfolio",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistics Portfolio</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Statistics Portfolio",
+    "section": "About",
+    "text": "About\nValdinar Pires Student at the University of Campinas (UNICAMP), with an interest in statistical analysis, data visualization, and statistical modeling.\nThis portfolio brings together projects developed throughout my academic training, with an emphasis on applying statistical concepts to real-world and historical datasets.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistics Portfolio</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Statistics Portfolio",
+    "section": "Projects",
+    "text": "Projects\nThe projects presented here explore different statistical methods and approaches, combining theoretical foundations with practical analysis in R and other data-related tools.\n\nCurrent projects\n\nSemmelweis Handwashing Study Analysis of historical data from the Vienna General Hospital, investigating the relationship between handwashing and maternal mortality.\n\nMore projects will be added as my academic portfolio develops.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistics Portfolio</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#tools",
+    "href": "index.html#tools",
+    "title": "Statistics Portfolio",
+    "section": "Tools",
+    "text": "Tools\nThe main tools used across the projects include:\n\nR\nQuarto\nGit and GitHub\n\nAdditional tools and programming languages will be incorporated as the portfolio expands.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistics Portfolio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Academic Interests\nI am a Statistics student at the University of Campinas (UNICAMP), interested in understanding how statistical methods can be used to extract information from data and support quantitative reasoning.\nMy academic training combines statistical theory, mathematical foundations, and practical data analysis. Through coursework and independent projects, I have been developing skills in statistical programming, data visualization, modeling, and statistical inference.\nMy main interests include:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About Me</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#academic-interests",
+    "href": "intro.html#academic-interests",
+    "title": "About Me",
+    "section": "",
+    "text": "Statistical inference\nSampling and survey methodology\nRegression and statistical modeling\nExperimental design\nExploratory and descriptive data analysis\nData visualization",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About Me</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#working-with-data",
+    "href": "intro.html#working-with-data",
+    "title": "About Me",
+    "section": "Working with Data",
+    "text": "Working with Data\nI am particularly interested in the process of moving from raw data to meaningful statistical conclusions: understanding the structure of a dataset, selecting appropriate methods, evaluating assumptions, and communicating results clearly.\nThis portfolio serves as a record of that development, bringing together projects completed during my academic training and documenting the methods used in each analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About Me</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Semmelweis Handwashing Study\nThis section presents selected statistical projects developed throughout my academic training.\nEach project focuses on a specific dataset, statistical question, or methodological problem, combining statistical reasoning with reproducible data analysis.\nStatistical analysis of handwashing and maternal mortality\nThis project analyzes historical data from the Vienna General Hospital between 1841 and 1846 to investigate the relationship between handwashing practices and maternal mortality.\nThe analysis includes:\nTools: R · tidyverse · ggplot2 · Quarto\nView project →",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Projects</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#semmelweis-handwashing-study",
+    "href": "summary.html#semmelweis-handwashing-study",
+    "title": "Projects",
+    "section": "",
+    "text": "Comparison of mortality between two clinics;\nDescriptive statistics and data visualization;\nComparison of mortality before and after the introduction of handwashing;\nComparison of mean, median, and mode;\nHypothesis testing.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Projects</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#more-projects",
+    "href": "summary.html#more-projects",
+    "title": "Projects",
+    "section": "More Projects",
+    "text": "More Projects\nAdditional projects will be added as my academic portfolio develops, covering topics such as sampling, regression, experimental design, probability, statistical inference, and data analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Projects</span>"
+    ]
+  }
+]
